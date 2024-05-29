@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <style>
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* width: 50%; */
+      }
+
+      .img-size img {
+        width: 320px;
+        height: 180px;
+      }
+    </style>
+  </head>
+
+  <body style="background-image: url('BigSuitcase.png'); background-size: 100%">
+    <div class="center" style="height: 50px; width: 50%; padding: 30px">
+      <h1 style="color: white; text-align: center">Project</h1>
+    </div>
+
+    <div style="display: flex; width: 500px; overflow-x: scroll" class="center">
+      <button
+        style="padding: 0; border: 0; background: transparent"
+        class="img-size"
+        onclick="myFunction('000')"
+      >
+        <img src="Room_000.png" />
+      </button>
+      <button
+        style="padding: 0; border: 0; background: transparent"
+        class="img-size"
+        onclick="myFunction('jjjjj')"
+      >
+        <img src="JumpJumpJumpJumpJump.png" />
+      </button>
+    </div>
+
+    <div
+      id="000"
+      class="center"
+      style="
+        color: white;
+        display: block;
+        text-align: center;
+        padding-top: 50px;
+      "
+    >
+      It's evening, time to do your homework! Also, don't forget the rule I give
+      you. <br />
+      What do you waiting for, go do your home work. Good luck! <br />
+      <img
+        src="Room_000_gif.gif"
+        alt="Room_000_gif"
+        style="padding-top: 20px; width: 30%; height: 30%"
+      /><br />
+      <a
+        href="https://rockalone.itch.io/room-000"
+        style="color: white; text-align: center; padding-top: 50px"
+        >https://rockalone.itch.io/room-000</a
+      ><br />
+    </div>
+    <div
+      id="jjjjj"
+      class="center"
+      style="color: white; display: none; text-align: center; padding-top: 50px"
+    >
+      The tiny robot need your help! Make him go across the dangerous land and
+      get to the goal! <br />
+      <img
+        src="Jumpx5_gif.gif"
+        alt="Jumpx5_gif"
+        style="padding-top: 20px; width: 30%; height: 30%"
+      /><br />
+      <a
+        href="https://rockalone.itch.io/jumpjumpjumpjumpjumpjump"
+        style="color: white; text-align: center; padding-top: 50px"
+        >https://rockalone.itch.io/jumpjumpjumpjumpjumpjump</a
+      >
+    </div>
+    <br />
+
+    <script>
+      const allDiv = ["000", "jjjjj"];
+      function myFunction(id) {
+        var x = document.getElementById(id);
+        let allOther = allDiv.filter((d) => d !== id);
+        let y = document.getElementById(allOther);
+        if (x.style.display === "none") {
+          x.style.display = "block";
+          y.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
